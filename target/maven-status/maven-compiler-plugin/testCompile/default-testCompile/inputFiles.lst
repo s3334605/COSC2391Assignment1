@@ -1,1 +1,4 @@
-/usercode/Daintree/src/test/java/com/mycompany/app/AppTest.java
+/usercode/Daintree/src/test/java/com/mycompany/app/BookstoreTest.java
+/usercode/Daintree/src/test/java/com/mycompany/app/BookTest.java
+/usercode/Daintree/src/test/java/com/mycompany/app/CartTest.java
+/usercode/Daintree/src/test/java/com/mycompany/app/BooklistTest.java

@@ -13,6 +13,10 @@ public class Booklist {
     	return bookList;
     }
 
+    public void setBookList(Book[] bookList) {
+        this.bookList = bookList;
+    }
+
     public void addBook(Book newBook) {
     	if (bookList[0].getTitle().isEmpty()) {
     		bookList[0] = newBook;
@@ -51,9 +55,8 @@ public class Booklist {
     
     public Booklist searchMatch(String input) {
         Booklist matches = new Booklist();
-        input = input.toUpperCase();
         for(Book book:bookList) {
-            if(book.getTitle().toUpperCase().contains(input)) {
+            if(book.containsTitle(input)) {
                 matches.addBook(book);
             }
         }
@@ -63,9 +66,8 @@ public class Booklist {
     public int searchIndex(String title) {
         int searchIndex = -1;
         int index = 0;
-        title = title.toUpperCase();
         for(Book book: bookList) {
-            if(title.equals(book.getTitle().toUpperCase())){
+            if(book.containsTitle(title)){
                 searchIndex = index;
             }
             index++;
